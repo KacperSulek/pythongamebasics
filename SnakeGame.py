@@ -105,7 +105,11 @@ while True:
                 changeDir = "Left"
             if event.key == pygame.K_d:
                 changeDir = "Right"
-    
+            if event.key == pygame.K_SPACE:
+                snakeSpeed = 36
+            else:
+                snakeSpeed = 12
+                
     if(changeDir == "Up" and dir != "Down"):
         dir = "Up"
     if(changeDir == "Down" and dir != "Up"):
