@@ -19,7 +19,6 @@ screen = pygame.display.set_mode((screenX, screenY))
 
 fps = pygame.time.Clock()
 
-
 snakePos = [100, 50]
 
 snakeBody = [
@@ -122,10 +121,10 @@ while True:
 
     pygame.draw.rect(screen, white, pygame.Rect(fruitPos[0], fruitPos[1], 10, 10))
 
-    if(snakePos[0] < 0 or snakePos[0] > score-10):
-        gameOver()
-    if(snakePos[1] < 0 or snakePos[1] > score-10):
-        gameOver()
+    if(snakePos[0] < 0 or snakePos[0] > screenX-10):
+       gameOver()
+    if(snakePos[1] < 0 or snakePos[1] > screenY-10):
+       gameOver()
 
     for block in snakeBody[1:]:
         if(snakePos[0] == block[0] and snakePos[1] == block[1]):
