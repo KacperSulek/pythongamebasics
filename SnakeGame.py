@@ -48,6 +48,9 @@ try:
 except:
     pass
 
+pygame.mixer.music.load("backgroundmusic.mp3")
+pygame.mixer.music.play(1000)
+
 def showScores(choice, color, font, size):
     scoreFont = pygame.font.SysFont(font, size)
 
